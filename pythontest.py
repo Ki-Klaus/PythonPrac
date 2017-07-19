@@ -1,6 +1,50 @@
 
 
 
+# 20170719 抛出错误
+# class FooError(ValueError):
+# 	pass
+# def foo(s):
+# 	n = int(s)
+# 	if n==0:
+# 		raise FooError('invalid value: %s' % s)
+# 	return 10/n
+# def bar():
+# 	try:
+# 		foo('0')
+# 	except ValueError as e:
+# 		print('ValueError!')
+# 		raise
+# bar()
+
+
+# 20170719 记录错误打印堆栈程序可继续执行
+# import logging
+# def foo(s):
+# 	return 10/int(s)
+# def bar(s):
+# 	return foo(s) * 2
+# def main():
+# 	try:
+# 		bar('0')
+# 	except Exception as e:
+# 		logging.exception(e)
+# main()
+# print('\nEND')
+
+
+# 20170719 常规try catch语块
+# try:
+# 	print('try...')
+# 	r = 10/2
+# 	print('result:', r)
+# except ZeroDivisionError as e:
+# 	print('except:', e)
+# finally:
+# 	print('finally...')
+# print('END')
+
+
 # 20170706 枚举类型
 # from enum import Enum, unique
 # Month = Enum('Month', ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'))
