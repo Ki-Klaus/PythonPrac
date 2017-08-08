@@ -1,3 +1,12 @@
+# 20170808
+# 加上反斜杠表示后面跟的字符串是一个整体
+with open(r'D:\PythonPrac\testFile.txt', 'w') as f:
+	f.write('hello python')
+f = open(r'D:\PythonPrac\testFile.txt', 'r')
+print(f.read())
+
+
+
 # 20170726单元测试
 # import unittest
 # class Dict(dict):
