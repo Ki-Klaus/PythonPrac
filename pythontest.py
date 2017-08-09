@@ -1,10 +1,18 @@
+# 20170809 json序列化
+import json
+d = dict(name='Bob', age=20, score=90)
+print(json.dumps(d))
+json_str = '{"age": 20, "score": 88, "name": "Bob"}'
+print(json.loads(json_str))
+class 
+
+
 # 20170808
 # 加上反斜杠表示后面跟的字符串是一个整体
-with open(r'D:\PythonPrac\testFile.txt', 'w') as f:
-	f.write('hello python')
-f = open(r'D:\PythonPrac\testFile.txt', 'r')
-print(f.read())
-
+# with open(r'D:\PythonPrac\testFile.txt', 'w') as f:
+# 	f.write('hello python')
+# f = open(r'D:\PythonPrac\testFile.txt', 'r')
+# print(f.read())
 
 
 # 20170726单元测试
