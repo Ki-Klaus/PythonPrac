@@ -1,10 +1,23 @@
+
 # 20170809 json序列化
-import json
-d = dict(name='Bob', age=20, score=90)
-print(json.dumps(d))
-json_str = '{"age": 20, "score": 88, "name": "Bob"}'
-print(json.loads(json_str))
-class 
+# import json
+# d = dict(name='Bob', age=20, score=90)
+# print(json.dumps(d))
+# json_str = '{"age": 20, "score": 88, "name": "Bob"}'
+# print(json.loads(json_str))
+# class Student(object):
+# 	def __init__(self, name, age, score):
+# 		self.name = name
+# 		self.age = age
+# 		self.score = score
+# s = Student('Bob', 20, 88)
+# def student2dict(std):
+# 	return{
+# 		'name':std.name,
+# 		'age':std.age,
+# 		'score':std.score
+# 	}
+# print(json.dumps(s, default=student2dict))
 
 
 # 20170808
@@ -174,7 +187,7 @@ class
 # print('s.score =', s.score)
 
 
-# 20170704 
+# 20170704
 # class Student(object):
 # 	pass
 # s = Student()
@@ -282,7 +295,7 @@ class
 # def now2():
 # 	print('sfsf')
 # now2()
-# def log3(u1): 
+# def log3(u1):
 #     def decorator(func):
 #         @functools.wraps(func)
 #         def wrapper(*args, **kw):
@@ -331,14 +344,14 @@ class
 # 	it = _odd_iter()
 # 	while True:
 # 		n = next(it)
-# 		yield n 
+# 		yield n
 # 		it = filter(_not_divisible(n), it)
 # for n in primes():
 # 	if n< 100:
 # 		print(n)
 
 
-# 20170630 
+# 20170630
 # 请编写一个prod()函数，可以接受一个list并利用reduce()求积：
 # from functools import reduce
 # def prod(L):
@@ -529,7 +542,7 @@ class
 # if bmi_result < 18.5:
 # 	print('过轻')
 # elif bmi_result >18.5 and bmi_result <25:
-# 	print('正常')
+# 	print_scoret('正常')
 # elif bmi_result >25 and bmi_result <28:
 # 	print('过重')
 # elif bmi_result >28 and bmi_result <32:
