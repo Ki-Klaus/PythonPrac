@@ -170,3 +170,395 @@
 
 # 19
 # 一个数如果恰好等于它的因子之和，这个数就称为"完数"。例如6=1＋2＋3.编程找出1000以内的所有完数。
+
+# 20
+# 一球从100米高度自由落下，每次落地后反跳回原高度的一半；再落下，求它在第10次落地时，共经过多少米？第10次反弹多高？
+# height = 100
+# total = 0
+# for i in range(2, 11):
+#     height = height / 2
+#     total = total + height * 2
+# print(total + 100)
+
+# 21
+# 猴子吃桃问题：猴子第一天摘下若干个桃子，当即吃了一半，还不瘾，又多吃了一个第二天早上又将剩下的桃子吃掉一半，又多吃了一个。以后每天早上都吃了前一天剩下的一半零一个。到第10天早上想再吃时，见只剩下一个桃子了。求第一天共摘了多少。
+# x = 1
+# for day in range(0,9):
+# 	x = (x+1)*2
+# print(x)
+
+# 22
+# 两个乒乓球队进行比赛，各出三人。甲队为a,b,c三人，乙队为x,y,z三人。已抽签决定比赛名单。有人向队员打听比赛的名单。a说他不和x比，c说他不和x,z比，请编程序找出三队赛手的名单。
+# n = ['a', 'b', 'c']
+# m = []
+# for i in range(3):
+#     if n[i] != 'a' and n[i] != 'c':
+#         m.insert(i, 'x')
+#     elif n[i] != 'c':
+#         m.insert(i, 'z')
+#     else:
+#         m.insert(i, 'y')
+# print('a--%s, b--%s, c--%s' % (m[0], m[1], m[2]))
+
+# 23
+# 打印出如下图案（菱形）:
+#    *
+#   ***
+#  *****
+# *******
+#  *****
+#   ***
+#    *
+# for i in range(1, 5):
+#     print(' ' * (4 - i), end="")
+#     for j in range(1, 2 * i):
+#         print('*', end="")
+#     print()
+# for i in range(3, 0, -1):
+#     print(' ' * (4 - i), end="")
+#     for j in range(1, 2 * i):
+#         print('*', end="")
+#     print()
+
+# 24
+# 有一分数序列：2/1，3/2，5/3，8/5，13/8，21/13...求出这个数列的前20项之和。
+# a = 2
+# b = 1
+# sum = 0
+# for i in range(1, 21):
+#     sum = sum + a / b
+#     a, b = a + b, a
+# print(sum)
+
+# 25
+# 求1+2!+3!+...+20!的和。
+# s=1
+# t=[]
+# for i in range(1,21):
+# 	s*=i
+# 	t.append(s)
+# print(sum(t)-1)
+
+# 26
+# 利用递归方法求5!
+# def fun(n):
+# 	if n ==0 or n ==1:
+# 		return 1
+# 	else:
+# 		return n*fun(n-1)
+# print(fun(5))
+
+# 27
+# 利用递归函数调用方式，将所输入的5个字符，以相反顺序打印出来。
+
+# 28
+# 题目：有5个人坐在一起，问第五个人多少岁？他说比第4个人大2岁。问第4个人岁数，他说比第3个人大2岁。问第三个人，又说比第2人大两岁。问第2个人，说比第一个人大两岁。最后问第一个人，他说是10岁。请问第五个人多大？
+# 程序分析：利用递归的方法，递归分为回推和递推两个阶段。要想知道第五个人岁数，需知道第四人的岁数，依次类推，推到第一人（10岁），再往回推。
+# def age(n):
+#     if n == 1:
+#         c = 10
+#     else:
+#         c = age(n - 1) + 2
+#     return c
+# print(age(5))
+
+# 29
+# 题目：给一个不多于5位的正整数，要求：一、求它是几位数，二、逆序打印出各位数字。
+# 程序分析：学会分解出每一位数。
+# num = 12345
+# l = str(num)[::-1]
+# print(l)
+
+# 30
+# 一个5位数，判断它是不是回文数。即12321是回文数，个位与万位相同，十位与千位相同。
+# a = 12321
+# a = str(a)
+# c = a[::-1]
+# if a == c:
+#     print('yes')
+# else:
+#     print('no')
+
+# 31
+# 请输入星期几的第一个字母来判断一下是星期几，如果第一个字母一样，则继续判断第二个字母。
+
+# 32
+# 按相反的顺序输出列表的值。
+# a = ['one', 'two', 'three', 'four', 'five', 'six', 'seven']
+# for i in a[::-1]:
+# 	print(i, end=" ")
+
+# 33
+# 按逗号分隔列表。
+# l = [1,2,3,4]
+# s1 = ','.join(str(n) for n in l)
+# print(s1)
+
+# 34
+# 练习函数调用。
+# def hello_world():
+#     print('hello world')
+# def three_hellos():
+#     for i in range(3):
+#         hello_world()
+# if __name__ == '__main__':
+#     three_hellos()
+
+# 35
+# 文本颜色设置。
+
+# 36
+# 求100之内的素数
+# for i in range(2, 100):
+#     if 0 not in [i % n for n in range(2, i)]:
+#     	print(i)
+
+# 37
+# 对10个数进行排序。
+# a = [12, 345, 5, 4, 7, 84, 6, 756, 5, 746, 46]
+# for i in range(10):
+#     for j in range(i + 1, 11):
+#         if a[i] > a[j]:
+#             a[i], a[j] = a[j], a[i]
+# print(a)
+
+# 38
+# 求一个3*3矩阵对角线元素之和。
+# """
+#     1  2  3
+#     4  5  6
+#     7  8  9
+# """
+# matrix = [[1,2,3], [4,5,6],[7,8,9]]
+# sum = 0
+# for i in range(0,3):
+# 	sum += matrix[i][i]
+# print(sum)
+
+# 39
+# 有一个已经排好序的数组。现输入一个数，要求按原来的规律将它插入数组中。
+# arr = [1, 4, 13, 25, 57, 78, 89]
+# n = 33
+# arr = sorted(arr)
+# arr.append(n)
+# arr = sorted(arr)
+# print(arr)
+
+# 40
+# 将一个数组逆序输出。
+# arr = [1, 4, 13, 25, 57, 78, 89]
+# arr = arr[::-1]
+# print(arr)
+
+# 41
+# 模仿静态变量的用法
+# def varfunc():
+# 	var = 0
+# 	print('var = %d' % var)
+# 	var += 1
+# if __name__ == '__main__':
+# 	for i in range(3):
+# 		varfunc()
+# class Static:
+# 	StaticVar = 5
+# 	def varfunc(self):
+# 		self.StaticVar += 1
+# 		print(self.StaticVar)
+# print(Static.StaticVar)
+# a = Static()
+# for i in range(3):
+# 	a.varfunc()
+
+# 42
+# 学习使用auto定义变量的用法。
+# num = 2
+# def autofunc():
+#     num = 1
+#     print('internal block num = %d' % num)
+#     num += 1
+# for i in range(3):
+#     print('The num = %d' % num)
+#     num += 1
+#     autofunc()
+
+
+# 43
+# 模仿静态变量(static)另一案例。
+# class Num:
+# 	nNum = 1
+# 	def inc(self):
+# 		self.nNum += 1
+# 		print('nNum = %d' % self.nNum)
+# nNum = 2
+# inst = Num()
+# for i in range(3):
+# 	nNum += 1
+# 	print('The num = %d' % nNum)
+# 	inst.inc()
+
+# 44
+# 两个 3 行 3 列的矩阵，实现其对应位置的数据相加，并返回一个新矩阵：
+# """
+# X = [[12,7,3],
+#     [4 ,5,6],
+#     [7 ,8,9]]
+
+# Y = [[5,8,1],
+#     [6,7,3],
+#     [4,5,9]]
+# """
+
+# 45
+# 两个 3 行 3 列的矩阵，实现其对应位置的数据相加，并返回一个新矩阵：
+# import numpy as np
+# x = np.array( [[12,7,3],
+#                [4 ,5,6],
+#                [7 ,8,9]])
+# y = np.array( [[5,8,1],
+#                [6,7,3],
+#                [4,5,9]])
+# z = x+y
+# print(z)
+# X = [[12, 7, 3],
+#      [4, 5, 6],
+#      [7, 8, 9]]
+# Y = [[5, 8, 1],
+#      [6, 7, 3],
+#      [4, 5, 9]]
+# result = [[0, 0, 0],
+#           [0, 0, 0],
+#           [0, 0, 0]]
+# for i in range(len(X)):
+#     for j in range(len(X[0])):
+#         result[i][j] = X[i][j] + Y[i][j]
+# for r in result:
+# 	print(r)
+
+# 46
+# 求输入数字的平方，如果平方运算后小于 50 则退出。
+
+# 47
+# 两个变量值互换。
+
+# 48
+# 数字比较。
+
+# 49
+# 使用lambda来创建匿名函数。
+# list = list(map(lambda x: x * x, [1, 2, 3, 4, 5, 6, 7, 8, 9]))
+# print(list)
+# f = lambda x: x * x
+# print(f(5))
+
+# 50
+# 输出一个随机数
+# import random
+# print(int(random.uniform(10,20)))
+
+# 51
+# 学习使用按位与 & 。
+
+# 52
+# 学习使用按位或 | 。
+
+# 53
+# 学习使用按位异或 ^ 。
+
+# 54
+# 取一个整数a从右端开始的4~7位。
+
+# 55
+# 学习使用按位取反~。
+
+# 56
+# 画图，学用circle画圆形。
+# if __name__ == '__main__':
+#     import turtle
+#     turtle.title("画圆")
+#     turtle.setup(800,600,0,0)
+#     pen=turtle.Turtle()
+#     pen.color("yellow")
+#     pen.width(5)
+#     pen.shape("turtle")
+#     pen.speed(1)
+#     pen.circle(100)
+
+# 57
+# 画图，学用line画直线。
+
+# 58
+# 画图，学用rectangle画方形。
+
+# 59
+# 画图综合
+
+# 60
+# 计算字符串长度。
+
+# 61
+# 打印出杨辉三角形。
+
+# 62
+# 查找字符串。
+# str1 = 'abcdefg'
+# str2 = 'bc'
+# print(str1.find(str2))
+
+# 63
+# 画椭圆。
+
+# 64
+# 利用ellipse 和 rectangle 画图。
+
+# 65
+# 一个最优美的图案。
+
+# 66
+# 输入3个数a,b,c，按大小顺序输出。　
+
+# 67
+# 输入数组，最大的与第一个元素交换，最小的与最后一个元素交换，输出数组。
+# a=[1,2,3,7,9,8]
+# min = min(a)
+# a.remove(min)
+# a.append(min)
+# # 最大的放到最前面
+# max = max(a)
+# a.remove(max)
+# a.insert(0,max)
+# print(a)
+
+# 68
+# 有n个整数，使其前面各数顺序向后移m个位置，最后m个数变成最前面的m个数
+# from collections import deque
+# m=3
+# a=[1,2,3,4,5,6,7]
+# f=deque(a)
+# f.rotate(m)
+# print(list(f))
+# m = 3
+# a = [1, 2, 3, 4, 5, 6, 7]
+# def rot(a, n):
+#     l = len(a)
+#     n = l - n
+#     return a[n:l] + a[0:n]
+# b = rot(a, 3)
+# print(b)
+
+# 69
+# 有n个人围成一圈，顺序排号。从第一个人开始报数（从1到3报数），凡报到3的人退出圈子，问最后留下的是原来第几号的那位。
+# data = [i+1 for i in range(20)]
+# print(data)
+# i = 1 
+# while len(data) > 1:
+#     if i % 3 == 0:
+#         data.pop(0)
+#         print(data)
+#     else:
+#         data.insert(len(data),data.pop(0))
+#     i += 1
+# print(data)
+
+# 70
+# 写一个函数，求一个字符串的长度，在main函数中输入字符串，并输出其长度。
+
