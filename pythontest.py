@@ -1,3 +1,5 @@
+# 20170908
+
 
 # 20170809 json序列化
 # import json
@@ -364,6 +366,12 @@
 # def normalize(name):
 # 	return map(lambda x:x[0].upper() + x[1:].lower(), name)
 # print(list(normalize(['adam', 'LISA', 'barT'])))
+# name = ['adam', 'LISA', 'barT']
+# def normalize(name):
+#     first = name[0].upper()
+#     name = name.lower()[1:]
+#     return first + name
+# print(list(map(normalize, name)))
 
 
 # 20170630 字符转换为整形
@@ -376,6 +384,7 @@
 # 	return reduce(fn, map(char2num, s))
 # print(str2int('1234'))
 
+print({'0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9}['1'])
 
 # 20170630 reduce运用
 # from functools import reduce
